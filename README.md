@@ -1,8 +1,6 @@
 # Rails Programming Task
 
-### In order to be considered for a rails position, you must complete the following steps.
 *Note: This task should take no longer than 1-2 hours at the most to complete.*
-
 
 ### Prerequisites
 
@@ -75,6 +73,13 @@
     5 should be disputed:
       - 3 should be linked to Customer 1
       - 2 should be linked to customer 2
+      
+##### Clarification of charge status
+
+- A successful charge is one where: `{paid: true, refunded: false}`
+- An unsuccessful charge is one where: `{paid: false, refunded: false}`
+- A refunded charge is one where: `{paid: true, refunded: true}`
+- There should never be a case where: `{paid: false, refunded: true}` *(You don't need to validate this assertion)*
 
 
 ##### Create a Visual Representation of Different Charges
