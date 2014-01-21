@@ -1,5 +1,7 @@
 # Rails Programming Task
 
+Please read the task instructions closely.
+
 *Note: This task should take no longer than 1-2 hours at the most to complete.*
 
 ### Prerequisites
