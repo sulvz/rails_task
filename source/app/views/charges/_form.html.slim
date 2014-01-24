@@ -1,0 +1,13 @@
+fieldset
+  .control-group
+    = f.label :customer, 'Customer', class: 'control-label'
+    .controls
+      = f.select :customer_id, options_from_collection_for_select(Customer.all, 'id', 'first_name')
+  .control-group
+    = f.label :amount, 'Amount', class: 'control-label'
+    .controls
+      = f.text_field :amount
+  .control-group
+      = f.label :currency, 'Currency', class: 'control-label'
+      .controls
+        = f.select :currency, ['usd', 'gbp', 'eur', 'inr']

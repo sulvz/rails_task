@@ -1,0 +1,46 @@
+.container
+  div
+    h1 = "Failed Charges"
+    table.table
+      tr
+        th Customer name
+        th Charge amount
+        th Charge failed date
+      - @failed_charges.each do |charge|
+        tr.failed-charges
+          td
+            = charge.customer.first_name
+          td
+            = charge.amount
+          td
+            = charge.created_at.strftime("%B %d %Y")
+  div
+    h1 = "Disputed Charges"
+    table.table
+      tr
+        th Customer name
+        th Charge amount
+        th Charge disputed date
+      - @disputed_charges.each do |charge|
+        tr.disputed-charges
+          td
+            = charge.customer.first_name
+          td
+            = charge.amount
+          td
+            = charge.created_at.strftime("%B %d %Y")
+  div
+    h1 = "Successful Charges"
+    table.table
+      tr
+        th Customer name
+        th Charge amount
+        th Charge date
+      - @successful_charges.each do |charge|
+        tr.successful-charges
+          td
+            = charge.customer.first_name
+          td
+            = charge.amount
+          td
+            = charge.created_at.strftime("%B %d %Y")
